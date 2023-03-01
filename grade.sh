@@ -6,7 +6,12 @@ echo 'Finished cloning'
 
 #cp student-submission/ListExamples.java ./
 cp -r lib student-submission
+cp -r TestListExamples.java student-submission
+
 cd student-submission
+#pwd
+
+ls
 
 if [[ -e ListExamples.java ]]
     then
@@ -23,6 +28,8 @@ if [[ $? -eq 0 ]]
     else
     echo "ListExamples does NOT compile"
 fi
+
+
 
 java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples
 
